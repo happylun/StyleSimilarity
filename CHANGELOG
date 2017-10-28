@@ -1,0 +1,13 @@
+==== 2015/12/29 ====
+
+* bug fixes to prevent infinite loop during Poisson disk sampling
+* bug fixes for Visual Studio compatibility
+
+==== 2015/08/24 ====
+
+* cleaned up third-party libraries
+* added missing binary files for different VS configurations
+
+==== 2015/08/07 ====
+
+* initial version

@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CAD8E1D9-E608-40C7-9B0D-DF305D99C0EC}</ProjectGuid>
+    <RootNamespace>StyleSimilarity</RootNamespace>
+    <ProjectName>StyleSimilarity</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Macros.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Macros.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Macros.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Macros.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)..\output\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)..\output\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)..\output\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)..\output\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\src\$(ProjectName);$(SolutionDir)..\src\Common;$(BOOST_HOME);$(SolutionDir)..\3rdparty;$(SolutionDir)..\3rdparty\flann\include;$(SolutionDir)..\3rdparty\nanoflann;$(SolutionDir)..\3rdparty\fftw\include;$(SolutionDir)..\3rdparty\glew\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <OpenMPSupport>false</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>arpack.lib;libboost_thread-$(VC_VERSION)-mt-$(BOOST_VERSION).lib;libboost_serialization-$(VC_VERSION)-mt-$(BOOST_VERSION).lib;libfftw3-3.lib;glew32.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\3rdParty\ARPACK\$(Platform);$(SolutionDir)..\3rdParty\fftw\$(Platform)\lib;$(SolutionDir)..\3rdParty\glew\lib\Release\$(Platform);$(BOOST_LIB32_DIR);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y "$(SolutionDir)..\3rdParty\ARPACK\$(Platform)\arpack.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdParty\ARPACK\$(Platform)\libgfortran-3.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdParty\ARPACK\$(Platform)\libquadmath-0.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdParty\ARPACK\$(Platform)\libgcc_s_dw2-1.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdparty\fftw\$(Platform)\bin\libfftw3-3.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdparty\glew\bin\Release\$(Platform)\glew32.dll" "$(OutDir)" &gt; nul</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\src\$(ProjectName);$(SolutionDir)..\src\Common;$(BOOST_HOME);$(SolutionDir)..\3rdparty;$(SolutionDir)..\3rdparty\flann\include;$(SolutionDir)..\3rdparty\nanoflann;$(SolutionDir)..\3rdparty\fftw\include;$(SolutionDir)..\3rdparty\glew\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <OpenMPSupport>false</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>arpack.lib;libboost_thread-$(VC_VERSION)-mt-$(BOOST_VERSION).lib;libboost_serialization-$(VC_VERSION)-mt-$(BOOST_VERSION).lib;libfftw3-3.lib;glew32.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\3rdParty\ARPACK\$(Platform);$(SolutionDir)..\3rdParty\fftw\$(Platform)\lib;$(SolutionDir)..\3rdParty\glew\lib\Release\$(Platform);$(BOOST_LIB64_DIR);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y "$(SolutionDir)..\3rdParty\ARPACK\$(Platform)\arpack.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdParty\ARPACK\$(Platform)\libgfortran-3.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdParty\ARPACK\$(Platform)\libquadmath-0.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdParty\ARPACK\$(Platform)\libgcc_s_sjlj-1.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdparty\fftw\$(Platform)\bin\libfftw3-3.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdparty\glew\bin\Release\$(Platform)\glew32.dll" "$(OutDir)" &gt; nul</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\src\$(ProjectName);$(SolutionDir)..\src\Common;$(BOOST_HOME);$(SolutionDir)..\3rdparty;$(SolutionDir)..\3rdparty\flann\include;$(SolutionDir)..\3rdparty\nanoflann;$(SolutionDir)..\3rdparty\fftw\include;$(SolutionDir)..\3rdparty\glew\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>arpack.lib;libboost_thread-$(VC_VERSION)-mt-$(BOOST_VERSION).lib;libboost_serialization-$(VC_VERSION)-mt-$(BOOST_VERSION).lib;libfftw3-3.lib;glew32.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\3rdParty\ARPACK\$(Platform);$(SolutionDir)..\3rdParty\fftw\$(Platform)\lib;$(SolutionDir)..\3rdParty\glew\lib\Release\$(Platform);$(BOOST_LIB32_DIR);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y "$(SolutionDir)..\3rdParty\ARPACK\$(Platform)\arpack.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdParty\ARPACK\$(Platform)\libgfortran-3.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdParty\ARPACK\$(Platform)\libquadmath-0.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdParty\ARPACK\$(Platform)\libgcc_s_dw2-1.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdparty\fftw\$(Platform)\bin\libfftw3-3.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdparty\glew\bin\Release\$(Platform)\glew32.dll" "$(OutDir)" &gt; nul</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\src\$(ProjectName);$(SolutionDir)..\src\Common;$(BOOST_HOME);$(SolutionDir)..\3rdparty;$(SolutionDir)..\3rdparty\flann\include;$(SolutionDir)..\3rdparty\nanoflann;$(SolutionDir)..\3rdparty\fftw\include;$(SolutionDir)..\3rdparty\glew\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>arpack.lib;libboost_thread-$(VC_VERSION)-mt-$(BOOST_VERSION).lib;libboost_serialization-$(VC_VERSION)-mt-$(BOOST_VERSION).lib;libfftw3-3.lib;glew32.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\3rdParty\ARPACK\$(Platform);$(SolutionDir)..\3rdParty\fftw\$(Platform)\lib;$(SolutionDir)..\3rdParty\glew\lib\Release\$(Platform);$(BOOST_LIB64_DIR);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y "$(SolutionDir)..\3rdParty\ARPACK\$(Platform)\arpack.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdParty\ARPACK\$(Platform)\libgfortran-3.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdParty\ARPACK\$(Platform)\libquadmath-0.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdParty\ARPACK\$(Platform)\libgcc_s_sjlj-1.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdparty\fftw\$(Platform)\bin\libfftw3-3.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdparty\glew\bin\Release\$(Platform)\glew32.dll" "$(OutDir)" &gt; nul</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\Common\Library\ARPACKHelper.h" />
+    <ClInclude Include="..\..\src\Common\Library\CMLHelper.h" />
+    <ClInclude Include="..\..\src\Common\Library\FLANNHelper.h" />
+    <ClInclude Include="..\..\src\Common\Library\MAXFLOWHelper.h" />
+    <ClInclude Include="..\..\src\Common\Library\SidKDTreeHelper.h" />
+    <ClCompile Include="..\..\src\Common\Library\ARPACKLinker.cpp" />
+    <ClCompile Include="..\..\src\Common\Library\MAXFLOWLinker.cpp" />
+    <ClCompile Include="..\..\src\Common\Library\SidKDTreeLinker.cpp" />
+    <ClInclude Include="..\..\src\Common\Utility\FileUtil.h" />
+    <ClInclude Include="..\..\src\Common\Utility\PlyExporter.h" />
+    <ClInclude Include="..\..\src\Common\Utility\PlyExporterTemplate.h" />
+    <ClInclude Include="..\..\src\Common\Utility\PlyLoader.h" />
+    <ClInclude Include="..\..\src\Common\Utility\PlyLoaderTemplate.h" />
+    <ClInclude Include="..\..\src\Common\Utility\StringUtil.h" />
+    <ClInclude Include="..\..\src\Common\Utility\Timer.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Cluster\ClusterKMeans.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Cluster\ClusterMeanShift.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Cluster\ClusterSparseSpectral.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Curve\CurveRidgeValley.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Data\StyleSimilarityConfig.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Data\StyleSimilarityData.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Data\StyleSimilarityTypes.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Element\ElementDistance.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Element\ElementMetric.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Element\ElementOptimization.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Element\ElementUtil.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Element\ElementVoting.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureAmbientOcclusion.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureAsset.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureCurvature.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureFPFH.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureGeodesic.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureLFD.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureSDF.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureShapeContexts.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureShapeDistributions.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureUtil.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureSpinImages.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureTalSaliency.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\LFD\CircularityDescriptor.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\LFD\constants.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\LFD\EccentricityDescriptor.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\LFD\FourierDescriptor.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\LFD\LightFieldDescriptor.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\LFD\PPMWriter.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\LFD\RenderContext.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\LFD\ZernikeDescriptor.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\IO\BaseIO.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\IO\Run\DemoIO.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Match\MatchSimpleICP.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Mesh\MeshUtil.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Sample\SamplePoissonDisk.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Sample\SampleUtil.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Segment\SegmentSampleApxCvx.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Segment\SegmentSampleSpectral.h" />
+    <ClInclude Include="..\..\src\StyleSimilarity\Segment\SegmentUtil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Common\Utility\FileUtil.cpp" />
+    <ClCompile Include="..\..\src\Common\Utility\PlyExporter.cpp" />
+    <ClCompile Include="..\..\src\Common\Utility\PlyLoader.cpp" />
+    <ClCompile Include="..\..\src\Common\Utility\StringUtil.cpp" />
+    <ClCompile Include="..\..\src\Common\Utility\Timer.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Cluster\ClusterKMeans.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Cluster\ClusterMeanShift.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Cluster\ClusterSparseSpectral.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Curve\CurveRidgeValley.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Data\StyleSimilarityConfig.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Data\StyleSimilarityData.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Element\ElementDistance.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Element\ElementMetric.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Element\ElementOptimization.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Element\ElementUtil.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Element\ElementVoting.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureAmbientOcclusion.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureAsset.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureCurvature.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureFPFH.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureGeodesic.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureLFD.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureSDF.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureShapeContexts.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureShapeDistributions.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureUtil.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureSpinImages.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureTalSaliency.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\LFD\CircularityDescriptor.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\LFD\EccentricityDescriptor.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\LFD\FourierDescriptor.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\LFD\LightFieldDescriptor.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\LFD\PPMWriter.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\LFD\RenderContext.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\LFD\ZernikeDescriptor.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\IO\BaseIO.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\IO\Run\DemoIO.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\main.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Match\MatchSimpleICP.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Mesh\MeshUtil.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Sample\SamplePoissonDisk.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Sample\SampleUtil.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Segment\SegmentSampleApxCvx.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Segment\SegmentSampleSpectral.cpp" />
+    <ClCompile Include="..\..\src\StyleSimilarity\Segment\SegmentUtil.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StyleSimilarity.licenseheader" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

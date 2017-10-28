@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Src">
+      <UniqueIdentifier>{8513db57-a3d8-4378-a8fa-f8794828c98b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Common">
+      <UniqueIdentifier>{aebef2ad-ddc2-4954-b17e-77588836c78b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Common\Utility">
+      <UniqueIdentifier>{092b30bf-e3d7-49a1-b293-6fc5108f3732}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\IO">
+      <UniqueIdentifier>{db144870-6337-4c03-a33b-1a93b9d0bceb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Data">
+      <UniqueIdentifier>{03709c0d-280b-45b2-a965-d836b3c1ee86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Common\Library">
+      <UniqueIdentifier>{ebe9c801-834b-43b4-b529-28778684fa28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Sample">
+      <UniqueIdentifier>{be5c44ab-1409-497a-b5ed-75cd08de1aa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Segment">
+      <UniqueIdentifier>{5350b64b-1260-4f9e-8ac5-848cafcd9262}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Match">
+      <UniqueIdentifier>{4d2c23cf-dee7-4666-a987-1346776dbe25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Cluster">
+      <UniqueIdentifier>{e9c9c19c-a24a-44b7-91e9-4892509992e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Mesh">
+      <UniqueIdentifier>{fa197d4a-4618-4245-9de0-da729424929c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Feature">
+      <UniqueIdentifier>{d5cc8b69-ef28-4dfd-af55-edb5cfaedffc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\IO\Run">
+      <UniqueIdentifier>{c5e43597-c8cf-4230-bc35-8b5093a2355f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Curve">
+      <UniqueIdentifier>{9880b9e1-b905-4b38-a283-0ab4f9492593}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Feature\LFD">
+      <UniqueIdentifier>{8e91fe78-6478-4be1-867a-1a3e22b268c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Element">
+      <UniqueIdentifier>{89699d0d-9482-4a53-998b-230b95c108b9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\Common\Utility\PlyExporter.h">
+      <Filter>Src\Common\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Common\Utility\PlyLoader.h">
+      <Filter>Src\Common\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Data\StyleSimilarityConfig.h">
+      <Filter>Src\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Data\StyleSimilarityData.h">
+      <Filter>Src\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Data\StyleSimilarityTypes.h">
+      <Filter>Src\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Common\Utility\PlyLoaderTemplate.h">
+      <Filter>Src\Common\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Common\Library\CMLHelper.h">
+      <Filter>Src\Common\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Sample\SamplePoissonDisk.h">
+      <Filter>Src\Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\IO\BaseIO.h">
+      <Filter>Src\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Common\Library\SidKDTreeHelper.h">
+      <Filter>Src\Common\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Cluster\ClusterMeanShift.h">
+      <Filter>Src\Cluster</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Common\Library\FLANNHelper.h">
+      <Filter>Src\Common\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Common\Utility\PlyExporterTemplate.h">
+      <Filter>Src\Common\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureCurvature.h">
+      <Filter>Src\Feature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureSDF.h">
+      <Filter>Src\Feature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Curve\CurveRidgeValley.h">
+      <Filter>Src\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Match\MatchSimpleICP.h">
+      <Filter>Src\Match</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Segment\SegmentSampleApxCvx.h">
+      <Filter>Src\Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Cluster\ClusterSparseSpectral.h">
+      <Filter>Src\Cluster</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Common\Library\ARPACKHelper.h">
+      <Filter>Src\Common\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Cluster\ClusterKMeans.h">
+      <Filter>Src\Cluster</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Common\Library\MAXFLOWHelper.h">
+      <Filter>Src\Common\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Common\Utility\Timer.h">
+      <Filter>Src\Common\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureAmbientOcclusion.h">
+      <Filter>Src\Feature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureGeodesic.h">
+      <Filter>Src\Feature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureAsset.h">
+      <Filter>Src\Feature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureLFD.h">
+      <Filter>Src\Feature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\LFD\CircularityDescriptor.h">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\LFD\constants.h">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\LFD\EccentricityDescriptor.h">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\LFD\FourierDescriptor.h">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\LFD\LightFieldDescriptor.h">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\LFD\PPMWriter.h">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\LFD\RenderContext.h">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\LFD\ZernikeDescriptor.h">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureSpinImages.h">
+      <Filter>Src\Feature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureFPFH.h">
+      <Filter>Src\Feature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureTalSaliency.h">
+      <Filter>Src\Feature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureShapeContexts.h">
+      <Filter>Src\Feature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Common\Utility\FileUtil.h">
+      <Filter>Src\Common\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Common\Utility\StringUtil.h">
+      <Filter>Src\Common\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureShapeDistributions.h">
+      <Filter>Src\Feature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Segment\SegmentSampleSpectral.h">
+      <Filter>Src\Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Element\ElementDistance.h">
+      <Filter>Src\Element</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Element\ElementMetric.h">
+      <Filter>Src\Element</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Element\ElementOptimization.h">
+      <Filter>Src\Element</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Element\ElementVoting.h">
+      <Filter>Src\Element</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Mesh\MeshUtil.h">
+      <Filter>Src\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Sample\SampleUtil.h">
+      <Filter>Src\Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Segment\SegmentUtil.h">
+      <Filter>Src\Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Element\ElementUtil.h">
+      <Filter>Src\Element</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\Feature\FeatureUtil.h">
+      <Filter>Src\Feature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSimilarity\IO\Run\DemoIO.h">
+      <Filter>Src\IO\Run</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Common\Utility\PlyExporter.cpp">
+      <Filter>Src\Common\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Common\Utility\PlyLoader.cpp">
+      <Filter>Src\Common\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\main.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Data\StyleSimilarityConfig.cpp">
+      <Filter>Src\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Data\StyleSimilarityData.cpp">
+      <Filter>Src\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Sample\SamplePoissonDisk.cpp">
+      <Filter>Src\Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\IO\BaseIO.cpp">
+      <Filter>Src\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Cluster\ClusterMeanShift.cpp">
+      <Filter>Src\Cluster</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Common\Library\SidKDTreeLinker.cpp">
+      <Filter>Src\Common\Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureCurvature.cpp">
+      <Filter>Src\Feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureSDF.cpp">
+      <Filter>Src\Feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Curve\CurveRidgeValley.cpp">
+      <Filter>Src\Curve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Match\MatchSimpleICP.cpp">
+      <Filter>Src\Match</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Segment\SegmentSampleApxCvx.cpp">
+      <Filter>Src\Segment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Cluster\ClusterSparseSpectral.cpp">
+      <Filter>Src\Cluster</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Common\Library\ARPACKLinker.cpp">
+      <Filter>Src\Common\Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Cluster\ClusterKMeans.cpp">
+      <Filter>Src\Cluster</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Common\Library\MAXFLOWLinker.cpp">
+      <Filter>Src\Common\Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Common\Utility\Timer.cpp">
+      <Filter>Src\Common\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureAmbientOcclusion.cpp">
+      <Filter>Src\Feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureGeodesic.cpp">
+      <Filter>Src\Feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureAsset.cpp">
+      <Filter>Src\Feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureLFD.cpp">
+      <Filter>Src\Feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\LFD\CircularityDescriptor.cpp">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\LFD\EccentricityDescriptor.cpp">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\LFD\FourierDescriptor.cpp">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\LFD\LightFieldDescriptor.cpp">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\LFD\PPMWriter.cpp">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\LFD\RenderContext.cpp">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\LFD\ZernikeDescriptor.cpp">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureSpinImages.cpp">
+      <Filter>Src\Feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureFPFH.cpp">
+      <Filter>Src\Feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureTalSaliency.cpp">
+      <Filter>Src\Feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureShapeContexts.cpp">
+      <Filter>Src\Feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Common\Utility\FileUtil.cpp">
+      <Filter>Src\Common\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Common\Utility\StringUtil.cpp">
+      <Filter>Src\Common\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureShapeDistributions.cpp">
+      <Filter>Src\Feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Segment\SegmentSampleSpectral.cpp">
+      <Filter>Src\Segment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Element\ElementDistance.cpp">
+      <Filter>Src\Element</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Element\ElementMetric.cpp">
+      <Filter>Src\Element</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Element\ElementOptimization.cpp">
+      <Filter>Src\Element</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Element\ElementVoting.cpp">
+      <Filter>Src\Element</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Mesh\MeshUtil.cpp">
+      <Filter>Src\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Sample\SampleUtil.cpp">
+      <Filter>Src\Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Segment\SegmentUtil.cpp">
+      <Filter>Src\Segment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Element\ElementUtil.cpp">
+      <Filter>Src\Element</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\Feature\FeatureUtil.cpp">
+      <Filter>Src\Feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSimilarity\IO\Run\DemoIO.cpp">
+      <Filter>Src\IO\Run</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StyleSimilarity.licenseheader" />
+  </ItemGroup>
+</Project>

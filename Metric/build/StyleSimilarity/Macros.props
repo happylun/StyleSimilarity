@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <VC_VERSION>vc110</VC_VERSION>
+    <BOOST_VERSION>1_55</BOOST_VERSION>
+    <BOOST_HOME>D:\boost\boost_1_55_0\</BOOST_HOME>
+    <BOOST_LIB32_DIR>$(BOOST_HOME)\lib32-msvc-11.0\</BOOST_LIB32_DIR>
+    <BOOST_LIB64_DIR>$(BOOST_HOME)\lib64-msvc-11.0\</BOOST_LIB64_DIR>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="VC_VERSION">
+      <Value>$(VC_VERSION)</Value>
+    </BuildMacro>
+    <BuildMacro Include="BOOST_VERSION">
+      <Value>$(BOOST_VERSION)</Value>
+    </BuildMacro>
+    <BuildMacro Include="BOOST_HOME">
+      <Value>$(BOOST_HOME)</Value>
+    </BuildMacro>
+    <BuildMacro Include="BOOST_LIB32_DIR">
+      <Value>$(BOOST_LIB32_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="BOOST_LIB64_DIR">
+      <Value>$(BOOST_LIB64_DIR)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
