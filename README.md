@@ -20,4 +20,4 @@ This archive contains source codes for the Style Similarity project. The main pi
 "Elements of Style: Learning Perceptual Shape Style Similarity",
 ACM Transactions on Graphics (Proc. ACM SIGGRAPH 2015)
 
-- For any questions or comments, please contact Zhaoliang Lun ([zlun@cs.umass.edu](mailto:zlun@cs.umass.edu))
+- For any questions or comments, please contact Zhaoliang Lun ([zhaoliang.lun@gmail.com](mailto:zhaoliang.lun@gmail.com))
